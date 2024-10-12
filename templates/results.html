@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Risultati della ricerca</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Risultati della ricerca</h1>
+  <table>
+    <tr>
+      <th>Nome PDF</th>
+      <th>Occorrenze</th>
+    </tr>
+    {% for result in results %}
+    <tr>
+      <td>{{ result[0] }}</td>
+      <td>{{ result[1] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <a href="/">Torna alla ricerca</a>
+</body>
+</html>

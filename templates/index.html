@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cerca nei PDF</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Cerca stringhe nei PDF</h1>
+  <form method="POST" enctype="multipart/form-data">
+    <label for="pdf_files">Seleziona i file PDF:</label>
+    <input type="file" id="pdf_files" name="pdf_files" accept=".pdf" multiple required><br>
+
+    <label for="search_string">Stringa di ricerca:</label>
+    <input type="text" id="search_string" name="search_string" required><br>
+
+    <label for="case_sensitive">Case sensitive:</label>
+    <input type="checkbox" id="case_sensitive" name="case_sensitive"><br>
+
+    <input type="submit" value="Cerca nei PDF">
+  </form>
+</body>
+</html>
